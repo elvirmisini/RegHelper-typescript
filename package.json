@@ -1,0 +1,30 @@
+{
+  "name": "reg-helper-typescript",
+  "version": "1.0.0",
+  "description": "It helps us to validate a parameter, while not writing regular expressions, but just calling some functions",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elvirmisini/RegHelper-typescript.git"
+  },
+  "keywords": [
+    "RegEx",
+    "Reg",
+    "Regular expressions"
+  ],
+  "author": "Elvir Misini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elvirmisini/RegHelper-typescript/issues"
+  },
+  "homepage": "https://github.com/elvirmisini/RegHelper-typescript#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "files": ["lib/**/*"]
+}
