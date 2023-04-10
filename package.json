@@ -1,6 +1,6 @@
 {
   "name": "reg-helper-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It helps us to validate a parameter, while not writing regular expressions, but just calling some functions",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
