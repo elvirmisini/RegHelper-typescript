@@ -100,5 +100,33 @@ export class RegHelper {
         const subnetMaskRegex = /^((128|192|224|240|248|252|254)\.0\.0\.0)|(255\.(0|128|192|224|240|248|252|254)\.0\.0)|(255\.255\.(0|128|192|224|240|248|252|254)\.0)|(255\.255\.255\.(0|128|192|224|240|248|252|254))$/;
         return subnetMaskRegex.test(subnetMask);
     }
+
+    static randomPasswordGeneration() {
+        const randomPassword =
+            Math.random().toString(36).slice(5) +
+            Math.random().toString(36)
+                .toUpperCase().slice(5);
+        return randomPassword
+    }
+
+    static validatePassword(password: string) {
+        // Define regular expressions for different password strengths
+        const weakRegex = /^[a-zA-Z]+$/;
+        const moderateRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]+$/;
+        const strongRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)[\w\W]+$/;
+
+        // Check the strength of the password
+        if (weakRegex.test(password)) {
+            return "Weak password";
+        } else if (moderateRegex.test(password)) {
+            return "Moderate password";
+        } else if (strongRegex.test(password)) {
+            return "Strong password";
+        } else {
+            return "Invalid password";
+        }
+    }
+
+
 }
 
